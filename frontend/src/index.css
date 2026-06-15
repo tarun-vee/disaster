@@ -1,0 +1,74 @@
+@import "tailwindcss";
+
+@theme {
+  --color-navy-900: #071330;
+  --color-navy-800: #101C3A;
+  --color-accent-blue: #3B82F6;
+  --color-text-primary: #FFFFFF;
+  --color-text-secondary: #94A3B8;
+  --color-status-success: #22C55E;
+  --color-status-warning: #F59E0B;
+  --color-status-danger: #EF4444;
+}
+
+@layer base {
+  body {
+    background-color: var(--color-navy-900);
+    color: var(--color-text-primary);
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  }
+}
+
+@layer components {
+  .glass-card {
+    background: rgba(16, 28, 58, 0.6);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 0.75rem;
+  }
+
+  .glass-input {
+    background: rgba(7, 19, 48, 0.8);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: var(--color-text-primary);
+    border-radius: 0.5rem;
+    padding: 0.75rem 1rem;
+    transition: all 0.2s ease-in-out;
+  }
+
+  .glass-input:focus {
+    outline: none;
+    border-color: var(--color-accent-blue);
+    box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.2);
+  }
+
+  .btn-primary {
+    background-color: var(--color-accent-blue);
+    color: var(--color-text-primary);
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    font-weight: 600;
+    transition: all 0.2s ease-in-out;
+    border: 1px solid transparent;
+  }
+
+  .btn-primary:hover {
+    background-color: #2563EB;
+    box-shadow: 0 4px 14px 0 rgba(59, 130, 246, 0.39);
+  }
+
+  .btn-secondary {
+    background-color: transparent;
+    color: var(--color-text-primary);
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    font-weight: 600;
+    transition: all 0.2s ease-in-out;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+  }
+
+  .btn-secondary:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+}
